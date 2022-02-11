@@ -5,10 +5,13 @@ local term_opts = { silent = true }
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
+--vim.g.mapleader = "\\"
+--vim.g.maplocalleader = "\\"
+
 --Remap space as leader key
-keymap("", "<Space>", "<Nop>", opts)
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+--keymap("", "<Space>", "<Nop>", opts)
+--vim.g.mapleader = " "
+--vim.g.maplocalleader = " "
 
 -- Modes
 --   normal_mode = "n",
@@ -66,5 +69,13 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+
+-- Telescope --
+keymap("n", "<Leader>ff", "<cmd>Telescope find_files<CR>", opts)
+keymap("n", "<Leader>fg", "<cmd>Telescope live_grep<CR>", opts)
+keymap("n", "<Leader>fb", "<cmd>Telescope buffers<CR>", opts) 
+
+-- Nvim Tree --
+keymap("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", opts)
 
 
