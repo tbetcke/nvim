@@ -44,12 +44,19 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim"
   use "nvim-lua/plenary.nvim"
   use "lunarvim/darkplus.nvim"
-  use {
-      'kyazdani42/nvim-tree.lua',
-      requires = {
-        'kyazdani42/nvim-web-devicons', -- optional, for file icon
-      }
-    }
+  use "kyazdani42/nvim-web-devicons" -- optional, for file icon
+  use "kyazdani42/nvim-tree.lua"
+  use "nvim-lualine/lualine.nvim"
+
+ use {
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
+} use 'folke/tokyonight.nvim'
+  use "moll/vim-bbye"
+
+
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
@@ -69,7 +76,7 @@ return packer.startup(function(use)
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
-
+  use {'nvim-telescope/telescope-ui-select.nvim' }
   -- Treesitter
   use {
     "nvim-treesitter/nvim-treesitter",

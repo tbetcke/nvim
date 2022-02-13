@@ -8,6 +8,7 @@ require "user.gitsigns"
 require "user.telescope"
 require "user.treesitter"
 require "user.nvim-tree"
+require "user.lualine"
 
 
 
