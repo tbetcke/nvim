@@ -9,6 +9,7 @@ require "user.telescope"
 require "user.treesitter"
 require "user.nvim-tree"
 require "user.lualine"
+require "user.toggleterm"
 
 
 
