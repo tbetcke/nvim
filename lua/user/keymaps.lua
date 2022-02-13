@@ -78,4 +78,3 @@ keymap("n", "<Leader>fb", "<cmd>Telescope buffers<CR>", opts)
 -- Nvim Tree --
 keymap("n", "<C-n>", "<cmd>NvimTreeToggle<CR>", opts)
 
-
