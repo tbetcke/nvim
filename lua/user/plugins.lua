@@ -47,7 +47,8 @@ return packer.startup(function(use)
 	use("kyazdani42/nvim-tree.lua")
 	use("nvim-lualine/lualine.nvim")
 	use({ "akinsho/toggleterm.nvim" })
-
+    use("iamcco/markdown-preview.nvim")
+    
 	use({
 		"numToStr/Comment.nvim",
 		config = function()
